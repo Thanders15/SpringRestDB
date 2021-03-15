@@ -5,7 +5,6 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.math.BigInteger;
 
 @Getter
 @Setter
@@ -13,7 +12,7 @@ import java.math.BigInteger;
 public class Post {
 
     @Id
-    private BigInteger id;
+    private long id;
     private String title;
     private String content;
 }
