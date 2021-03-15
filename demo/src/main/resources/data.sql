@@ -1,0 +1,1 @@
+insert into post (id, title, content) VALUES (1, 'Testowy post', 'Content testowy')
