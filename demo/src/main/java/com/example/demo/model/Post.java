@@ -5,6 +5,9 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Getter
 @Setter
@@ -15,4 +18,8 @@ public class Post {
     private long id;
     private String title;
     private String content;
+
+    @OneToMany
+    @JoinColumn(name = "post_id")
+    private List<Comment> comment;
 }

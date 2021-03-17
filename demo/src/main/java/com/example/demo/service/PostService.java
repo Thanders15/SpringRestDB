@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Locale;
 
 @Service
 @RequiredArgsConstructor
@@ -14,6 +15,11 @@ public class PostService {
     private final PostRepository postRepository;
 
     public List<Post>getPosts(){
-        return postRepository.findAll();
+        return postRepository.findAllPost();
     }
+
+    public Post getSinglePost(Long id){
+        return postRepository.findById(id).orElseThrow();
+    }
+
 }

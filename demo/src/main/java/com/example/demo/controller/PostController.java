@@ -21,7 +21,7 @@ public class PostController {
     }
 
     @GetMapping("/posts{id}")
-    public List<Post> getSinglePost(@PathVariable long id){
-        throw new IllegalArgumentException("Not implemented!");
+    public Post getSinglePost(@PathVariable long id){
+        return postService.getSinglePost(id);
     }
 }
