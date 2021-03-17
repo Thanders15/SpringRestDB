@@ -4,6 +4,7 @@ import com.example.demo.model.Post;
 import com.example.demo.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 import java.util.Locale;
@@ -22,4 +23,8 @@ public class PostService {
         return postRepository.findById(id).orElseThrow();
     }
 
+
+    public Post addPost(Post post) {
+        return postRepository.save(post);
+    }
 }

@@ -3,9 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.model.Post;
 import com.example.demo.service.PostService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +21,10 @@ public class PostController {
     @GetMapping("/posts{id}")
     public Post getSinglePost(@PathVariable long id){
         return postService.getSinglePost(id);
+    }
+
+    @PostMapping("/posts")
+    public Post addPost(@RequestBody Post post){
+        return postService.addPost(post);
     }
 }
