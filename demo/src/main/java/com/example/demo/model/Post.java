@@ -17,7 +17,7 @@ public class Post {
     private String title;
     private String content;
 
-    @OneToMany
-    @JoinColumn(name = "post_id")
+    @OneToMany(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "post_id", updatable = false, insertable = false)
     private List<Comment> comment;
 }
