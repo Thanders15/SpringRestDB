@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package SpringDB.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,5 +16,6 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    private long post_id;
     private String content;
 }

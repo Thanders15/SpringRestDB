@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package SpringDB.model;
 
 import lombok.Getter;
 import lombok.Setter;

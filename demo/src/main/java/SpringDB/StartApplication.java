@@ -1,14 +1,12 @@
-package com.example.demo;
+package SpringDB;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.Locale;
-
 @SpringBootApplication
-public class DemoApplication {
+public class StartApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(StartApplication.class, args);
 	}
 }

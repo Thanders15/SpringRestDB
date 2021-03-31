@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package SpringDB.controller;
 
-import com.example.demo.model.Post;
-import com.example.demo.service.PostService;
+import SpringDB.model.Post;
+import SpringDB.service.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
